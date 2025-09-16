@@ -91,7 +91,7 @@ Meshery chart for deploying Meshery
 ## Setup Repo Info
 
 ```console
-helm repo add meshery meshery https://meshery.io/charts/
+helm repo add meshery https://meshery.io/charts/
 helm repo update
 ```
 
@@ -103,7 +103,7 @@ To install the chart with the release name `meshery`:
 
 ```console
 kubectl create namespace meshery
-helm install meshery meshery/meshery
+helm install meshery meshery/meshery -n meshery
 ```
 
 ## Uninstalling the Chart
@@ -111,7 +111,7 @@ helm install meshery meshery/meshery
 To uninstall/delete the `meshery` deployment:
 
 ```console
-helm delete meshery
+helm uninstall meshery -n meshery
 ```
 
 ## Installing the Chart with a custom namespace
